@@ -1,0 +1,114 @@
+<html>
+<head>
+    <meta name="viewport"
+          content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+    <meta name="HandheldFriendly" content="True"/>
+    <style type="text/css">
+        html { height: 100% }
+        body { height: 100%; margin: 0px; padding: 0px; background-color:#FEFFFF }
+
+        .divTable{
+        width: 100%;
+        height: 18%;
+        }
+        .textAll{
+        border:5px solid #A1C8DF;
+        width: 100%;
+        height: 100%;
+        background-color:#A1C8DF
+        }
+        .divDial {
+        width: 100%;
+        height: 12%;
+        padding: 1%;
+        background: #FEFFFF;
+
+        }
+        .divEdit {
+        width: 100%;
+        height: 7%;
+        padding: 1%;
+        background: #FEFFFF;
+        }
+        .divSend {
+        width: 100%;
+        height: 7%;
+        padding: 1%;
+        background: #FEFFFF;
+        text-align:center;
+        }
+        .btnDial {
+        width: 32%;
+        height: 100%;
+        padding: 1%;
+        background: #839CB2;
+        }
+        .btnEdit {
+        width: 48%;
+        height: 100%;
+        background:#3D5476;
+        }
+
+    </style>
+    <script type="text/javascript">
+
+function executePnumber(num) {
+    document.getElementById("pnumber").value = JStest.returnNumber(num);
+}
+function pushmessage(){
+	var myTextField = document.getElementById('demo');
+	JStest.printresult(myTextField.value);
+}
+function resetString(set){
+    document.getElementById("pnumber").value= JStest.resetMassage();
+}
+function removeString(set){
+    document.getElementById("pnumber").value= JStest.removeoneString();
+}
+
+
+
+
+    </script>
+</head>
+<body>
+<br/>
+
+<div class="divDial">
+    <input class="btnDial" type="button" onclick="executePnumber('1')" value="1">
+    <input class="btnDial" type="button" onclick="executePnumber('2')" value="2">
+    <input class="btnDial" type="button" onclick="executePnumber('3')" value="3">
+</div>
+<div class="divDial">
+    <input class="btnDial" type="button" onclick="executePnumber('4')" value="4">
+    <input class="btnDial" type="button" onclick="executePnumber('5')" value="5">
+    <input class="btnDial" type="button" onclick="executePnumber('6')" value="6">
+</div>
+<div class="divDial">
+    <input class="btnDial" type="button" onclick="executePnumber('7')" value="7">
+    <input class="btnDial" type="button" onclick="executePnumber('8')" value="8">
+    <input class="btnDial" type="button" onclick="executePnumber('9')" value="9">
+</div>
+<div class="divDial">
+    <input class="btnDial" type="button" onclick="executePnumber('*')" value="*">
+    <input class="btnDial" type="button" onclick="executePnumber('0')" value="0">
+    <input class="btnDial" type="button" onclick="executePnumber('#')" value="#">
+</div>
+<div class="divEdit">
+    <input class="btnEdit" type="button" onclick="resetString()" value="Reset">
+    <input class="btnEdit" type="button" onclick="removeString()" value="Del">
+</div>
+<div class="divEdit">
+    <input class="btnEdit" onfocus='blur()' type="text" style="text-align:center;background-color:#CDD3DB;"
+           VALUE="Phone number :">
+    <input class="btnEdit" style=" text-align:right; background-color:#CDD3DB;" onfocus='blur()'
+           type="text" id="pnumber">
+</div>
+<div class="divTable">
+    <textarea class="textAll" id="demo" name="comments" rows="5" ></textarea>
+</div>
+<div class="divSend">
+    <input type='button' onclick="pushmessage()" value='Send'/>
+</div>
+</body>
+</html>
